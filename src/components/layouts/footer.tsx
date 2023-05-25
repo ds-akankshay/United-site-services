@@ -24,7 +24,7 @@ const Footer = (props: any) => {
 	));
 	return (
 		<>
-			<footer className="site-footer" style={{backgroundColor:"#00284a",height:"450px"}}>
+			<footer className="site-footer inline-block" style={{backgroundColor:"#00284a",height:"450px"}}>
 				<div className="container" >
 					{Footersection}
 				</div>

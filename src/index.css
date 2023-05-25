@@ -638,4 +638,10 @@ nav[aria-label="Pagination"] button:disabled{@apply cursor-not-allowed text-opac
   .storelocation-openCloseTime table.day-hrs .currentDay .dayName .checked{@apply left-1}
 }
 
+  .site-footer  {
+    background-color: #00284a;
+    height: 450px;
+    width: 100%;
+  }
+
 
