@@ -643,5 +643,9 @@ nav[aria-label="Pagination"] button:disabled{@apply cursor-not-allowed text-opac
     height: 450px;
     width: 100%;
   }
-
-
+.tag{
+  background-image: linear-gradient(90deg, #cecd8545, #cbd5dd6e 62%, #00a94f26);
+}
+.bannercolor{
+  background-image: linear-gradient(90deg, #eeeda60a, #cbd5dd6e 62%, #00a94f38);
+}

@@ -9,12 +9,12 @@ import Link from "../commons/Link";
 const Footer = (props: any) => {
 	const Footersection = props?._site?.c_footer?.map((link: any) => (
 		<>
-			<div style={{color:"white",marginTop:"40px"}}>
-				<h2 className="" style={{marginLeft:"30px",marginRight:"30px"}}>{link.heading}</h2>
+			<div style={{ color: "white", marginTop: "40px" }}>
+				<h2 className="" style={{ marginLeft: "30px", marginRight: "30px" }}>{link.heading}</h2>
 				<ul> {link?.name?.map((value: any) => (
 					<li>
 						<a href="">
-							<span style={{color:"#979a9a",marginLeft:"30px",marginRight:"30px"}}>{value?.label} </span>
+							<span style={{ color: "#979a9a", marginLeft: "30px", marginRight: "30px" }}>{value?.label} </span>
 						</a>
 					</li>
 				))}
@@ -22,11 +22,39 @@ const Footer = (props: any) => {
 			</div>
 		</>
 	));
+
+	const socialicon = props?._site?.c_socialicon?.map((link: any) => (
+		<>
+			<img className="" src={link.url} alt="" style={{ height: "22px", marginLeft: "" }} />
+		</>
+	));
+	const text = props?._site?.c_text?.url.map((link: any) => (
+		<>
+			<a href="">
+				<div className="">{link.label}</div>
+			</a>
+		</>
+	));
+
+
 	return (
 		<>
-			<footer className="site-footer inline-block" style={{backgroundColor:"#00284a",height:"450px"}}>
+			<footer className="site-footer inline-block" style={{ backgroundColor: "#00284a", height: "450px" }}>
 				<div className="container" >
 					{Footersection}
+				</div>
+				<div className="flex space-x-4" style={{ marginTop: "45px", marginLeft:"55px" }}>
+					{socialicon}
+					<div style={{ color: "white", marginLeft: "50px", fontSize: "smaller" }} className="flex" >
+						{props._site.c_text.text1}
+						{text}
+						{props._site.c_text.text2}
+					</div>
+					<div>
+					</div>
+				</div>
+				<div style={{color:"white" ,marginTop:"22px",fontSize: "smaller",marginLeft:"59px"}}>
+				{props._site.c_line}
 				</div>
 			</footer>
 			<CookieConsent

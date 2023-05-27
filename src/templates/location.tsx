@@ -72,7 +72,13 @@ export const config: TemplateConfig = {
       "displayCoordinate",
       "cityCoordinate",
       "c_about",
-      "c_servicesdata"
+      "c_servicesdata",
+      "c_bannerimage",
+      "c_tag",
+      "c_customer",
+      "c_number",
+      "c_startedget"
+
     ],
     // Defines the scope of entities that qualify for this stream.
     filter: {
@@ -278,12 +284,18 @@ const Location: Template<ExternalApiRenderData> = ({
     cityCoordinate,
     name,
     c_about,
-    c_servicesdata
+    c_servicesdata,
+    c_bannerimage,
+    c_tag,
+    c_customer,
+    c_number,
+    c_startedget
+
   } = document;
   const Services = c_servicesdata?.name?.map((link: any) => (
     <>
       <a href="flex ">
-        <button className="px-4 rounded" style={{backgroundColor:"#ffe000" ,height: "45px"}}>{link.label}</button>
+        <button className="px-4 rounded" style={{ backgroundColor: "#ffe000", height: "45px" }}>{link.label}</button>
       </a>
     </>
 
@@ -454,12 +466,17 @@ const Location: Template<ExternalApiRenderData> = ({
         {" "}
         <AnalyticsScopeProvider name={""}>
           <Header _site={_site} />
+
           <PageLayout global={_site}>
 
 
             <div className="container">
-              <div className='banner-text banner-dark-bg justify-center text-center'>
-                <h1 className="">{name}</h1>
+              <div className="image" style={{}}>
+                <img src={c_bannerimage.url} alt="" />
+
+                <div className='banner-text banner-dark-bg justify-center text-center'>
+                  <h1 className="">    {name}</h1>
+                </div>
                 <div className="openClosestatus detail-page closeing-div">
                   <OpenClose timezone={timezone} hours={hours} />
                 </div>
@@ -479,8 +496,19 @@ const Location: Template<ExternalApiRenderData> = ({
                   </div>
               }
             </div>
-            <div className="flex space-x-8">
-              <div className=""><img src={c_about.image.url} alt="" className="w-full" style={{ height: "300px", width: "1147px", marginLeft: "" }} /></div>
+            <div className="tag" >
+              <div style={{marginLeft:"50px"}}>
+                <span style={{color:"#00284a"}}>{c_customer}</span><br /> 
+                <div style={{marginLeft:"900px",color:"#00284a"}}>
+                {c_tag}
+              </div> <br />
+               <span style={{color:"#00d084"}}>{c_number}</span> 
+
+              </div>
+              
+            </div>
+            <div className="flex space-x-8" style={{marginTop:"70px"}} >
+              <div className=""><img src={c_about.image.url} alt="" className="w-full" style={{ height: "300px", width: "1147px", marginLeft: "18px" }} /></div>
               <div >
                 <h1>{c_about.name1}</h1>
                 <p style={{ margin: "10px 0px" }}>{c_about.description1}</p>
@@ -488,9 +516,9 @@ const Location: Template<ExternalApiRenderData> = ({
                 <p style={{ marginTop: "12px" }}>{c_about.description2}</p>
               </div>
             </div>
-            <div className="w-full" style={{height:"200px",marginTop:"40px",backgroundColor:"#00539b"}}>
-              <h2 style={{marginLeft:"70px",color:"white"}}>{c_servicesdata.heading}</h2>
-              <div className="grid grid-cols-4 gap-4" style={{marginLeft:"70px",marginRight:"50px",marginTop:"30px"}}>
+            <div className="w-full" style={{ height: "200px", marginTop: "40px", backgroundColor: "#00539b" }}>
+              <h2 style={{ marginLeft: "70px", color: "white" }}>{c_servicesdata.heading}</h2>
+              <div className="grid grid-cols-4 gap-4" style={{ marginLeft: "70px", marginRight: "50px", marginTop: "30px" }}>
                 {Services}
               </div>
             </div>
@@ -501,6 +529,14 @@ const Location: Template<ExternalApiRenderData> = ({
                   {yextDisplayCoordinate || cityCoordinate || displayCoordinate ?
                     <Nearby externalApiData={externalApiData} />
                     : ''}
+                </div>
+                <div className="bannercolor">
+                  <span>{c_startedget.name}</span><br />
+                  <a href="">
+                    <button>{c_startedget.button.label}</button>
+                  </a><br />
+                  <span>{c_startedget.paragraph}</span>
+                
                 </div>
 
               </div>

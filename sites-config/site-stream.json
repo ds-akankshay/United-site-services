@@ -8,7 +8,10 @@
       "name",
       "c_image",
       "c_headername",
-      "c_footer"
+      "c_footer",
+      "c_socialicon",
+      "c_text",
+      "c_line"
 
   ],
   "localization": {
