@@ -489,7 +489,7 @@ const Location: Template<ExternalApiRenderData> = ({
             </div>
             <div className="location-information">
               <Contact address={address}
-                phone={mainPhone} latitude={yextDisplayCoordinate ? yextDisplayCoordinate.latitude : displayCoordinate?.latitude}
+                phone={mainPhone} time={timezone} latitude={yextDisplayCoordinate ? yextDisplayCoordinate.latitude : displayCoordinate?.latitude}
                 yextDisplayCoordinate={yextDisplayCoordinate} longitude={yextDisplayCoordinate ? yextDisplayCoordinate.longitude : displayCoordinate?.longitude} hours={hours} additionalHoursText={additionalHoursText} ></Contact>
               {
                 hours ?

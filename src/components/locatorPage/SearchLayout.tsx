@@ -260,11 +260,11 @@ const loading = useSearchState(s=>s.searchStatus.isLoading);
               params={params1}
               searchOnSelect={true}
               searchFields={[
-                {
-                  entityType: "location",
-                  fieldApiName: "address.line1",
+                // {
+                //   entityType: "location",
+                //   fieldApiName: "address.line1",
 
-                },
+                // },
                 {
                   entityType: "location",
                   fieldApiName: "address.postalCode",
@@ -275,16 +275,16 @@ const loading = useSearchState(s=>s.searchStatus.isLoading);
                     fieldApiName: "name",
 
                 },
-                {
-                  entityType: "location",
-                  fieldApiName: "address.city",
+                // {
+                //   entityType: "location",
+                //   fieldApiName: "address.city",
 
-                },
-                {
-                  entityType: "location",
-                  fieldApiName: "address.region",
+                // },
+                // {
+                //   entityType: "location",
+                //   fieldApiName: "address.region",
 
-                  },
+                //   },
                   // {
                   //   entityType: "location",
                   //   fieldApiName: "address.countryCode",
