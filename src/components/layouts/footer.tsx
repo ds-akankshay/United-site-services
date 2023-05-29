@@ -45,7 +45,7 @@ const Footer = (props: any) => {
 				</div>
 				<div className="flex space-x-4" style={{ marginTop: "45px", marginLeft:"55px" }}>
 					{socialicon}
-					<div style={{ color: "white", marginLeft: "50px", fontSize: "smaller" }} className="flex" >
+					<div style={{ color: "white", marginLeft: "196px", fontSize: "smaller" }} className="flex" >
 						{props._site.c_text.text1}
 						{text}
 						{props._site.c_text.text2}
@@ -53,7 +53,7 @@ const Footer = (props: any) => {
 					<div>
 					</div>
 				</div>
-				<div style={{color:"white" ,marginTop:"22px",fontSize: "smaller",marginLeft:"59px"}}>
+				<div style={{color:"white" ,marginTop:"22px",fontSize: "smaller",marginLeft:"398px"}}>
 				{props._site.c_line}
 				</div>
 			</footer>

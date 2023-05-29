@@ -17,6 +17,7 @@ return (
           <img src={props._site.c_image.url} alt=""  style={{height:"60px",width:"115px",marginLeft: "30px"}}/>
           
           {Header1}
+         <img  className="search" src= {props?._site?.c_icon.url} alt="" style={{marginLeft: "50px"}}/>
         </div>
         
      </div>

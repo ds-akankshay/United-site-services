@@ -27,7 +27,7 @@ const Contact = (props: any) => {
   return (
     <>
       <div className="address-main-sec">
-        <h4 className="box-title">{c_storeInfoHeading?c_storeInfoHeading:"Store Details"}</h4>
+        <h4 className="box-title">{c_storeInfoHeading?c_storeInfoHeading:"Branch Details"}</h4>
 
         <div className="icon-row content-col">
           <div className="icon">
@@ -39,6 +39,7 @@ const Contact = (props: any) => {
             <div>{address.line2 && <div>{address.line2}</div>}</div>
             <div>{address.city}</div>
             <div>{address.postalCode}</div>
+            
           </div>
         </div>
 
@@ -59,7 +60,8 @@ const Contact = (props: any) => {
         )}
 
         <ul className="">
-          <li className="button-bx direction-button">
+          
+          <li className="" >
             <GetDirection
               buttonText={c_getDirectionsCTAText?c_getDirectionsCTAText:StaticData.getDirection}
               address={address}
@@ -79,7 +81,7 @@ const Contact = (props: any) => {
         <div className="hours">
           <div className="hours-sec">
             <div className="title-with-link-1">
-              <h4 className="box-title">{"Store Opening Hours"}</h4>
+              <h4 className="box-title">{"Branch Opening Hours"}</h4>
             </div>
             <div className="hours-div mb-5 md:mb-1 flex flex-col">
               {hours.holidayHours && typeof hours.reopenDate == "undefined" ? (
@@ -99,7 +101,7 @@ const Contact = (props: any) => {
       </div> */}
               {hours && (
                 <Hours
-                  title={"Store Opening Hours"}
+                  title={"Branch Opening Hours"}
                   additionalHoursText={additionalHoursText}
                   hours={hours}
                   c_specific_day={c_specific_day}

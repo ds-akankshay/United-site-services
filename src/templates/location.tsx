@@ -77,7 +77,8 @@ export const config: TemplateConfig = {
       "c_tag",
       "c_customer",
       "c_number",
-      "c_startedget"
+      "c_startedget",
+      "c_textbanner"
 
     ],
     // Defines the scope of entities that qualify for this stream.
@@ -289,7 +290,8 @@ const Location: Template<ExternalApiRenderData> = ({
     c_tag,
     c_customer,
     c_number,
-    c_startedget
+    c_startedget,
+    c_textbanner
 
   } = document;
   const Services = c_servicesdata?.name?.map((link: any) => (
@@ -471,15 +473,18 @@ const Location: Template<ExternalApiRenderData> = ({
 
 
             <div className="container">
-              <div className="image" style={{}}>
+              <div className="image" style={{ marginTop: "25px" }}>
                 <img src={c_bannerimage.url} alt="" />
 
                 <div className='banner-text banner-dark-bg justify-center text-center'>
-                  <h1 className="">    {name}</h1>
+                  <h1 className="">{name}</h1>
                 </div>
-                <div className="openClosestatus detail-page closeing-div">
+                <div style={{ marginLeft: "505px", fontSize: "initial" }}>
+                  {c_textbanner}{name}
+                </div>
+                {/* <div className="openClosestatus detail-page closeing-div">
                   <OpenClose timezone={timezone} hours={hours} />
-                </div>
+                </div> */}
               </div>
             </div>
             <div className="location-information">
@@ -496,23 +501,21 @@ const Location: Template<ExternalApiRenderData> = ({
                   </div>
               }
             </div>
-            <div className="tag" >
-              <div style={{marginLeft:"50px"}}>
-                <span style={{color:"#00284a"}}>{c_customer}</span><br /> 
-                <div style={{marginLeft:"900px",color:"#00284a"}}>
-                {c_tag}
-              </div> <br />
-               <span style={{color:"#00d084"}}>{c_number}</span> 
-
+            <div className="tag" style={{height:"125px"}}>
+              <div style={{ marginLeft: "50px" }}>
+                <span style={{ color: "#00284a",fontSize:"25px" }}>{c_customer}</span><br />
+                <div style={{ marginLeft: "900px", color: "#00284a",fontSize:"28px" }}>
+                  {c_tag}
+                </div> <br />
+                <span style={{ color: "#00d084",fontSize:"22px"}}>{c_number}</span>
               </div>
-              
             </div>
-            <div className="flex space-x-8" style={{marginTop:"70px"}} >
+            <div className="flex space-x-8" style={{ marginTop: "70px" }} >
               <div className=""><img src={c_about.image.url} alt="" className="w-full" style={{ height: "300px", width: "1147px", marginLeft: "18px" }} /></div>
               <div >
-                <h1>{c_about.name1}</h1>
-                <p style={{ margin: "10px 0px" }}>{c_about.description1}</p>
-                <span style={{ fontSize: "18px", marginTop: "7px" }}>{c_about.name2}</span>
+                <h1 style={{color: "#00539b"}}>{c_about.name1}</h1>
+                <p style={{ margin: "10px 0px"}}>{c_about.description1}</p>
+                <span style={{ fontSize: "18px", marginTop: "7px",color: "#00539b" }}>{c_about.name2}</span>
                 <p style={{ marginTop: "12px" }}>{c_about.description2}</p>
               </div>
             </div>
@@ -530,19 +533,15 @@ const Location: Template<ExternalApiRenderData> = ({
                     <Nearby externalApiData={externalApiData} />
                     : ''}
                 </div>
-                <div className="bannercolor">
-                  <span>{c_startedget.name}</span><br />
+                <div className="bannercolor w-full" style={{marginTop: "26px",height:"125px"}}>
+                  <div style={{fontSize: "x-large",color:"#00284a",marginTop:"10px"}}>{c_startedget.name}</div><br />
                   <a href="">
-                    <button>{c_startedget.button.label}</button>
+                    <button className="rounded-full"  style={{marginLeft:"1000px" ,backgroundColor:"#00284a",color:"white",width: "136px",height: "36px",fontSize: "11px"}}>{c_startedget.button.label}</button>
                   </a><br />
                   <span>{c_startedget.paragraph}</span>
-                
                 </div>
-
               </div>
-
             </div>
-
           </PageLayout>
         </AnalyticsScopeProvider>
         <Footer _site={_site} />

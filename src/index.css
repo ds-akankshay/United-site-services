@@ -649,3 +649,11 @@ nav[aria-label="Pagination"] button:disabled{@apply cursor-not-allowed text-opac
 .bannercolor{
   background-image: linear-gradient(90deg, #eeeda60a, #cbd5dd6e 62%, #00a94f38);
 }
+.search{
+ 
+
+    height: 18px;
+    margin-top: 30px;
+    
+ 
+}

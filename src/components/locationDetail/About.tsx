@@ -24,11 +24,8 @@ export default function About(props: any) {
           <div className="w-full lg:w-2/5 xl:w-[47%] relative  left-0">
               <div className="lg:h-full">
               {props.photoGallery ?
-                    props.photoGallery.map((element:any) => (   
-
-                        <img height={518} width={658} src={element.url} alt="photo" />
-                  
-                      ))
+                    props.photoGallery.map((element:any) => (
+                    <img height={518} width={658} src={element.url} alt="photo" />))
                     : ''}
               </div>
           </div>
@@ -36,7 +33,7 @@ export default function About(props: any) {
             <div className="mb-4">
               <h2>{props.name}</h2>
               <div className="">
-              <div class="about-content-inner" dangerouslySetInnerHTML={{__html: convertToRtf(props.description)}}/>
+              <div className="about-content-inner" dangerouslySetInnerHTML={{__html: convertToRtf(props.description)}}/>
               </div>
               {props.c_viewMore.link&&props.c_viewMore.label?
               <div className="content-center w-full ">
