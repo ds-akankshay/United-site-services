@@ -140,7 +140,7 @@ export const getHeadConfig: GetHeadConfig<TemplateRenderProps> = ({
   document,
 }): HeadConfig => {
   return {
-    title: document.c_meta_title ? document.c_meta_title : `${document.name} Store of MGM Timber`,
+    title: document.c_meta_title ? document.c_meta_title : `${document.name} United Site Services`,
     charset: "UTF-8",
     viewport: "width=device-width, initial-scale=1",
     tags: [
@@ -183,7 +183,7 @@ export const getHeadConfig: GetHeadConfig<TemplateRenderProps> = ({
         type: "meta",
         attributes: {
           property: "og:description",
-          content: `${document.c_meta_description ? document.c_meta_description : `Find the ${document.name} Timber Store in ${document.address.city}. We stock high-quality, robust products at competitive rates.`}`,
+          content: `${document.c_meta_description ? document.c_meta_description : `Find the ${document.name} United Site servives Branch in ${document.address.city}. We stock high-quality, robust products at competitive rates.`}`,
         },
       },
       {
@@ -218,14 +218,14 @@ export const getHeadConfig: GetHeadConfig<TemplateRenderProps> = ({
         type: "meta",
         attributes: {
           name: "twitter:title",
-          content: document.c_meta_title ? document.c_meta_title : `${document.name} Store of MGM Timber`,
+          content: document.c_meta_title ? document.c_meta_title : `${document.name} Branch of United Site Services`,
         },
       },
       {
         type: "meta",
         attributes: {
           name: "twitter:description",
-          content: `${document.c_meta_description ? document.c_meta_description : `Find the ${document.name} Timber Store in ${document.address.city}. We stock high-quality, robust products at competitive rates.`}`,
+          content: `${document.c_meta_description ? document.c_meta_description : `Find the ${document.name} Branch of United Site Services ${document.address.city}. We stock high-quality, robust products at competitive rates.`}`,
         },
       },
       /// twitter tag

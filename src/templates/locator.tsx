@@ -56,7 +56,7 @@ export const getHeadConfig: GetHeadConfig<TemplateRenderProps> = ({
   document,
 }): HeadConfig => {
  return {
-   title:`${document.c_meta_title?document.c_meta_title:`Timber Merchants Near Me - Find MGM Timber Branch Locator Here.`}`,
+   title:`${document.c_meta_title?document.c_meta_title:`Branch of United Site Services Near Me - Find United Site Services Branch Locator Here.`}`,
    charset: "UTF-8",
    viewport: "width=device-width, initial-scale=1",
    tags: [
@@ -64,7 +64,7 @@ export const getHeadConfig: GetHeadConfig<TemplateRenderProps> = ({
        type: "meta",
        attributes: {
          name: "description",
-         content: `${document.c_meta_description?document.c_meta_description:`View Timber Merchants near you today at MGM Timber. We stock high-quality, robust products at competitive rates.`}`,
+         content: `${document.c_meta_description?document.c_meta_description:`View United Site Services near you today at United Site Services. We stock high-quality, robust products at competitive rates.`}`,
        },
      },
 
@@ -106,14 +106,14 @@ export const getHeadConfig: GetHeadConfig<TemplateRenderProps> = ({
        type: "meta",
        attributes: {
          property: "og:description",
-         content: `${document.c_meta_description?document.c_meta_description:`View Timber Merchants near you today at MGM Timber. We stock high-quality, robust products at competitive rates.`}`,
+         content: `${document.c_meta_description?document.c_meta_description:`United Site Services is the leading provider of porta potty rentals in the United States with 100+ locations serving over 115,000 customers from coast to coast`}`,
        },
      },
      {
        type: "meta",
        attributes: {
          property: "og:title",
-         content: `${document.c_meta_title?document.c_meta_title:`Timber Merchants Near Me - Find MGM Timber Branch Locator Here.`}`,
+         content: `${document.c_meta_title?document.c_meta_title:`Branch of United Site Services Near Me - Find United Site Services Branch Locator Here.`}`,
        },
      },
      {
@@ -134,14 +134,14 @@ export const getHeadConfig: GetHeadConfig<TemplateRenderProps> = ({
       type: "meta",
       attributes: {
         name: "twitter:description",
-        content:`${document.c_meta_description?document.c_meta_description:`View Timber Merchants near you today at MGM Timber. We stock high-quality, robust products at competitive rates.`}`,
+        content:`${document.c_meta_description?document.c_meta_description:`United Site Services is the leading provider of porta potty rentals in the United States with 100+ locations serving over 115,000 customers from coast to coast.`}`,
       },
     },
     {
       type: "meta",
       attributes: {
         name: "twitter:title",
-        content: `${document.c_meta_title?document.c_meta_title:`Timber Merchants Near Me - Find MGM Timber Branch Locator Here.`}`,
+        content: `${document.c_meta_title?document.c_meta_title:`Branch of United Site Services Near Me - Find United Site Services Branch Locator Here.`}`,
       },
     },
     {
@@ -183,7 +183,7 @@ const Locator: Template<TemplateRenderProps>= ({
         item={{
           "@context": "https://schema.org",
           "@type": "Organization",
-          name: "MGM ",
+          name: "United Site Services",
           url: stagingBaseurl,
           logo: favicon,
         }}

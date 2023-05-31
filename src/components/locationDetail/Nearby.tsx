@@ -76,7 +76,7 @@ export default function Nearby(props: any) {
                     <div>
                     {typeof location.distance != "undefined" ?
                 <div className="distance">
-                  {metersToMiles(location.distance)} <span>{location.miles}</span>
+                  {metersToMiles(location.distance)} <span>Miles{location.miles}</span>
                 </div>
                 : ''}
                     </div>
