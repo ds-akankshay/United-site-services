@@ -39,7 +39,7 @@ import OpenClose from "../components/commons/openClose";
 import Faq from "../components/locationDetail/Faqs";
 import { StaticData } from "../../sites-global/staticData";
 
-import { apikey_for_entity, baseuRL, stagingBaseurl, AnalyticsEnableDebugging, AnalyticsEnableTrackingCookie, favicon } from "../../sites-global/global";
+import { apikey_for_entity, baseuRL, stagingBaseurl, AnalyticsEnableDebugging, AnalyticsEnableTrackingCookie, favicon, regionNames } from "../../sites-global/global";
 import {
   AnalyticsProvider,
   AnalyticsScopeProvider,
@@ -291,7 +291,8 @@ const Location: Template<ExternalApiRenderData> = ({
     c_customer,
     c_number,
     c_startedget,
-    c_textbanner
+    c_textbanner,
+    dm_directoryParents
 
   } = document;
   const Services = c_servicesdata?.name?.map((link: any) => (
@@ -468,6 +469,12 @@ const Location: Template<ExternalApiRenderData> = ({
         {" "}
         <AnalyticsScopeProvider name={""}>
           <Header _site={_site} />
+          <BreadCrumbs
+          name={name}
+          address={address}
+          parents={dm_directoryParents}
+          baseUrl={relativePrefixToRoot}
+        ></BreadCrumbs>
 
           <PageLayout global={_site}>
 

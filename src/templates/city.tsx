@@ -631,8 +631,6 @@ const City: Template<TemplateRenderProps> = ({
                         <Header _site={_site} />
                         <BreadCrumbs
                             name={name}
-                            // logo={Logo}
-                            // post={Post}
                             address={address}
                             parents={dm_directoryParents}
                             baseUrl={relativePrefixToRoot}

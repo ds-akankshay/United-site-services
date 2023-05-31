@@ -277,11 +277,11 @@ const region: Template<TemplateRenderProps> = ({
         <PageLayout global={_site}>
         <Header _site={ _site}/>
         <BreadCrumbs
-            name={name}
-            parents={dm_directoryParents}
-            baseUrl={relativePrefixToRoot}
-            address={address}
-          ></BreadCrumbs>
+          name={name}
+          address={address}
+          parents={dm_directoryParents}
+          baseUrl={relativePrefixToRoot}
+        ></BreadCrumbs>
           {/* <div className="location-dtl">     <Banner name={c_bannerHeading?c_bannerHeading:name} c_bannerImage={bannerimage}  /></div> */}
           
 

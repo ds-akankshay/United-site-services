@@ -192,6 +192,12 @@ const country: Template<TemplateRenderProps> = ({
     <>
       <PageLayout global={_site}>
       <Header _site={ _site}/>
+      <BreadCrumbs
+          name={name}
+          address={address}
+          parents={dm_directoryParents}
+          baseUrl={relativePrefixToRoot}
+        ></BreadCrumbs>
         {/* <div className="banner">
           <div className="locator-banner">
             <img src={_site.c_locatorbanner.url} alt={''} />
