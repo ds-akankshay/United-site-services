@@ -647,7 +647,7 @@ const City: Template<TemplateRenderProps> = ({
                                             {/* {Logo} */}
                                         </div>
                                         <div>
-                                            <div className="flex space-x-40" >
+                                            <div className="flex space-x-40" style={{marginLeft:"500px"}} >
                                                 {childrenDivs}
                                             </div>
                                         </div>

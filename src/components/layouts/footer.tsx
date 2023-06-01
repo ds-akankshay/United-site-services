@@ -25,7 +25,9 @@ const Footer = (props: any) => {
 
 	const socialicon = props?._site?.c_socialicon?.map((link: any) => (
 		<>
+		<a href="">
 			<img className="" src={link.url} alt="" style={{ height: "22px", marginLeft: "" }} />
+			</a>
 		</>
 	));
 	const text = props?._site?.c_text?.url.map((link: any) => (
@@ -43,8 +45,10 @@ const Footer = (props: any) => {
 				<div className="container" >
 					{Footersection}
 				</div>
-				<div className="flex space-x-4" style={{ marginTop: "45px", marginLeft:"55px" }}>
-					{socialicon}
+				<div className="flex space-x-4" style={{ marginTop: "45px", marginLeft: "55px" }}>
+					
+						{socialicon}
+					
 					<div style={{ color: "white", marginLeft: "196px", fontSize: "smaller" }} className="flex" >
 						{props._site.c_text.text1}
 						{text}
@@ -53,8 +57,8 @@ const Footer = (props: any) => {
 					<div>
 					</div>
 				</div>
-				<div style={{color:"white" ,marginTop:"22px",fontSize: "smaller",marginLeft:"398px"}}>
-				{props._site.c_line}
+				<div style={{ color: "white", marginTop: "22px", fontSize: "smaller", marginLeft: "398px" }}>
+					{props._site.c_line}
 				</div>
 			</footer>
 			<CookieConsent
