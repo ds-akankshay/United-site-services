@@ -78,7 +78,10 @@ export const config: TemplateConfig = {
       "c_customer",
       "c_number",
       "c_startedget",
-      "c_textbanner"
+      "c_textbanner",
+      "dm_directoryParents.name",
+      "dm_directoryParents.slug",
+      "dm_directoryParents.meta.entityType"
 
     ],
     // Defines the scope of entities that qualify for this stream.

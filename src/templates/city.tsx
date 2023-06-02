@@ -154,7 +154,7 @@ export const getHeadConfig: GetHeadConfig<TemplateRenderProps> = ({
                 type: "meta",
                 attributes: {
                     name: "author",
-                    content: " TGI Fridays Restaurant",
+                    content: " ",
                 },
             },
 
@@ -356,58 +356,7 @@ const City: Template<TemplateRenderProps> = ({
                                 <br />
                             </p>
                         </div>
-                        {/* <div className="store-phone w3w">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="21.23"
-              height="30"
-              viewBox="0 0 21.23 30"
-            >
-              <g id="map-pin-icon" transform="translate(0 0)">
-                <path
-                  id="Path_8"
-                  data-name="Path 8"
-                  d="M6.789,23.576c1.079,1.719,2.246,3.8,3.4,5.825.427.747.813.859,1.326-.027,1.113-1.931,2.207-3.931,3.359-5.8,3.5-5.661,9.223-11.181,4.67-18.8C15.5-1.987,4.5-1.265,1.216,5.034c-3.769,7.219,2.117,13.039,5.574,18.542Z"
-                  fill="#d61a0c"
-                  fillRule="evenodd"
-                />
-                <rect
-                  id="Rectangle_230"
-                  data-name="Rectangle 230"
-                  width="1"
-                  height="12"
-                  transform="matrix(0.966, 0.259, -0.259, 0.966, 8.186, 5.075)"
-                  fill="#fff"
-                />
-                <rect
-                  id="Rectangle_231"
-                  data-name="Rectangle 231"
-                  width="1"
-                  height="12"
-                  transform="matrix(0.966, 0.259, -0.259, 0.966, 12.186, 5.075)"
-                  fill="#fff"
-                />
-                <rect
-                  id="Rectangle_232"
-                  data-name="Rectangle 232"
-                  width="1"
-                  height="12"
-                  transform="matrix(0.966, 0.259, -0.259, 0.966, 16.186, 5.075)"
-                  fill="#fff"
-                />
-              </g>
-            </svg>
-            <a
-              target="_blank"
-              href={
-                entity.what3WordsAddress
-                  ? `https://what3words.com/${entity.what3WordsAddress} `
-                  : ""
-              }
-            >
-              What3Words
-            </a>
-          </div> */}
+                        
                         {entity.mainPhone && <div className="store-Pizza">
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
@@ -543,75 +492,14 @@ const City: Template<TemplateRenderProps> = ({
             );
         }
     }
-    //   c_globalData &&
-    //     c_globalData.map((i: any) => {
-    //       address = i.address ? i.address : [];
-    //       c_companyrn = i.c_companyrn ? i.c_companyrn : "";
-    //       c_footerLinks = i.c_footerLinks ? i.c_footerLinks : [];
-    //       c_headerLinks1 = i.c_headerLinks1 ? i.c_headerLinks1 : [];
-    //       c_phoneNumber = i.phoneNumber ? i.phoneNumber : "";
-    //       facebookPageUrl = i.facebookPageUrl ? i.facebookPageUrl : "";
-    //       instagramHandle = i.instagramHandle ? i.instagramHandle : "";
-    //       twitterHandle = i.twitterHandle ? i.twitterHandle : "";
-    //       c_tikTok = i.c_tikTok ? i.c_tikTok : "";
-    //     });
+    //   
 
     let templateData = { document: document, meta: meta };
     // let breadcrumbScheme: any = [];
     let currentIndex: any = 0;
-    // dm_directoryParents &&
-    //   dm_directoryParents.map((i: any, index: any) => {
-    //     currentIndex = index;
-    //     if (index != 0) {
-    //       breadcrumbScheme.push({
-    //         "@type": "ListItem",
-    //         position: 1,
-    //         item: {
-    //           "@id": `${stagingBaseUrl}/${i.slug}.html`,
-    //           name: i.name,
-    //         },
-    //       });
-    //     }
-    //   });
-    // breadcrumbScheme.push({
-    //   "@type": "ListItem",
-    //   position: 1,
-    //   item: {
-    //     //"@id": `${stagingBaseUrl}${dm_directoryParents[1].slug}.html`,
-    //     name: dm_directoryParents[1].name,
-    //   },
-    // });
-    // breadcrumbScheme.push({
-    //   "@type": "ListItem",
-    //   position: 2,
-    //   item: {
-    //     //"@id": `${stagingBaseUrl}${dm_directoryParents[1].slug}/${dm_directoryParents[2].slug}.html`,
-    //     name: dm_directoryParents[2].name,
-    //   },
-    // });
-    // breadcrumbScheme.push({
-    //   "@type": "ListItem",
-    //   position: 3,
-    //   item: {
-    //    // "@id": `${stagingBaseUrl}${dm_directoryParents[1].slug}/${dm_directoryParents[2].slug}/${document.slug.toString()}.html`,
-    //     name: document.name,
-    //   },
-    // });
+   
     return (
         <>
-            {/* <JsonLd<Organization>
-        item={{
-          "@context": "https://schema.org",
-          "@type": "Organization",
-          "name": "Domino's Pizza",
-          "url": "https://www.Domino's Pizza.co.uk/",
-          //"logo": favicon,
-          "sameAs": [
-            "https://www.twitter.com/Domino's Pizza",
-            "https://www.facebook.com/Domino's Pizza"
-          ],
-        }}
-      /> */}
             <JsonLd<BreadcrumbList>
                 item={{
                     "@context": "https://schema.org",
@@ -635,7 +523,6 @@ const City: Template<TemplateRenderProps> = ({
                             parents={dm_directoryParents}
                             baseUrl={relativePrefixToRoot}
                         ></BreadCrumbs>
-
                         <div className="content-list city-page">
                             <div className="container mx-auto">
                                 <div className="sec-title">
@@ -647,7 +534,7 @@ const City: Template<TemplateRenderProps> = ({
                                             {/* {Logo} */}
                                         </div>
                                         <div>
-                                            <div className="flex space-x-40" style={{marginLeft:"500px"}} >
+                                            <div className="flex space-x-40" style={{ marginLeft: "500px" }} >
                                                 {childrenDivs}
                                             </div>
                                         </div>
