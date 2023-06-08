@@ -10,6 +10,7 @@ import { StaticData } from "../../../sites-global/staticData";
 import Holidayhours from "./Holdayhours";
 import Model from "./Model";
 import CustomMap from "./CustomMap";
+import OpenClose from "../commons/openClose";
 
 const Contact = (props: any) => {
   const {
@@ -22,12 +23,16 @@ const Contact = (props: any) => {
     additionalHoursText,
     yextDisplayCoordinate,
     c_storeInfoHeading,
-    c_getDirectionsCTAText
+    c_getDirectionsCTAText,
+    c_getqoutelocation,
+    timezone
   } = props;
+  console.log(timezone, "time");
+  // console.log(c_getqoutelocation,"qoute1");
   return (
     <>
       <div className="address-main-sec">
-        <h4 className="box-title">{c_storeInfoHeading?c_storeInfoHeading:"Branch Details"}</h4>
+        <h4 className="box-title">{c_storeInfoHeading ? c_storeInfoHeading : "Branch Details"}</h4>
 
         <div className="icon-row content-col">
           <div className="icon">
@@ -39,10 +44,8 @@ const Contact = (props: any) => {
             <div>{address.line2 && <div>{address.line2}</div>}</div>
             <div>{address.city}</div>
             <div>{address.postalCode}</div>
-            
           </div>
         </div>
-
         {phone ? (
           <div className="icon-row">
             <div className="icon">
@@ -58,25 +61,24 @@ const Contact = (props: any) => {
         ) : (
           ""
         )}
-
+        <OpenClose hours={hours} />
         <ul className="">
-          
           <li className="" >
             <GetDirection
-              buttonText={c_getDirectionsCTAText?c_getDirectionsCTAText:StaticData.getDirection}
+              buttonText={c_getDirectionsCTAText ? c_getDirectionsCTAText : StaticData.getDirection}
               address={address}
               latitude={latitude}
               longitude={longitude}
             />
           </li>
         </ul>
-
+        <a href={c_getqoutelocation?.link}>
+          <span>{c_getqoutelocation?.label}</span>
+        </a>
         <div className="map-sec">
           <CustomMap prop={yextDisplayCoordinate} />
         </div>
-
       </div>
-
       {hours && typeof hours.monday != "undefined" ? (
         <div className="hours">
           <div className="hours-sec">
@@ -95,7 +97,6 @@ const Contact = (props: any) => {
               ) : (
                 ""
               )}
-
               {/* <div className="title-with-link-1">
         <h4 className="box-title">{"Store Hours"}</h4>        
       </div> */}

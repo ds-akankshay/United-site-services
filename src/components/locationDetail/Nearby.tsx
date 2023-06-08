@@ -104,7 +104,7 @@ export default function Nearby(props: any) {
                         <circle id="Ellipse_5" data-name="Ellipse 5" cx="4" cy="4" r="4" fill="#00284a" />
                       </svg>
                       <div className="hours-info text-lg font-second-main-font closeddot">
-                        Closed
+                       
                       </div>
                     </div>
                   }

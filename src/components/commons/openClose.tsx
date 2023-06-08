@@ -361,7 +361,7 @@ export const OpenStausFunctions = {
       hour12: true,
     });
   },
-  getUtcOffsetFromTimeZone: (timeZone, date = new Date()) => {
+  getUtcOffsetFromTimeZone: (timeZone:any, date = new Date()) => {
     const tz = date
       .toLocaleString("en-gb", { timeZone, timeStyle: "long" })
       .split(" ")

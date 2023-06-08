@@ -81,7 +81,8 @@ export const config: TemplateConfig = {
       "c_textbanner",
       "dm_directoryParents.name",
       "dm_directoryParents.slug",
-      "dm_directoryParents.meta.entityType"
+      "dm_directoryParents.meta.entityType",
+      "c_getqoutelocation"
 
     ],
     // Defines the scope of entities that qualify for this stream.
@@ -295,7 +296,8 @@ const Location: Template<ExternalApiRenderData> = ({
     c_number,
     c_startedget,
     c_textbanner,
-    dm_directoryParents
+    dm_directoryParents,
+    c_getqoutelocation
 
   } = document;
   const Services = c_servicesdata?.name?.map((link: any) => (
@@ -492,15 +494,17 @@ const Location: Template<ExternalApiRenderData> = ({
                 <div style={{ marginLeft: "505px", fontSize: "initial" }}>
                   {c_textbanner}{name}
                 </div>
-                {/* <div className="openClosestatus detail-page closeing-div">
+                <div className="openClosestatus detail-page closeing-div">
                   <OpenClose timezone={timezone} hours={hours} />
-                </div> */}
+                </div>
               </div>
             </div>
             <div className="location-information">
               <Contact address={address}
                 phone={mainPhone} time={timezone} latitude={yextDisplayCoordinate ? yextDisplayCoordinate.latitude : displayCoordinate?.latitude}
-                yextDisplayCoordinate={yextDisplayCoordinate} longitude={yextDisplayCoordinate ? yextDisplayCoordinate.longitude : displayCoordinate?.longitude} hours={hours} additionalHoursText={additionalHoursText} ></Contact>
+                yextDisplayCoordinate={yextDisplayCoordinate} longitude={yextDisplayCoordinate ? yextDisplayCoordinate.longitude : displayCoordinate?.longitude} hours={hours} additionalHoursText={additionalHoursText} c_getqoutelocation={c_getqoutelocation} >
+
+                </Contact>
               {
                 hours ?
                   <div className="map-sec" id="map_canvas">

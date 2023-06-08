@@ -261,7 +261,7 @@ const region: Template<TemplateRenderProps> = ({
       <li className=" storelocation-category">
         <a
           key={entity.slug}
-          href={stagingBaseurl  + detlslug}
+          href={ slug + "/" + entity.slug + ".html"}
         >
           {entity.name} ({entity.dm_baseEntityCount})
         </a>

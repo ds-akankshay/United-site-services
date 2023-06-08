@@ -14,10 +14,11 @@ const GetDirection = (props: GetDirection) => {
     buttonText, 
     latitude,
 	address,
-    longitude 
+  longitude,
+  c_getqoutelocation
   } = props;
 
-  
+  console.log(c_getqoutelocation,"name");
   const getDirectionUrl = () => {
     var origin: any = null;
     if (address.city) {
@@ -78,6 +79,12 @@ const GetDirection = (props: GetDirection) => {
                     >
                         {buttonText}
                     </Link>
+                   
+                   {/* <a href="">
+                    <span>{c_getqoutelocation.link}</span>
+                   </a>
+                   <div>{c_getqoutelocation.label}</div>
+                     */}
     {/* <a
      onClick={getDirectionUrl} className="btn notHighlight" rel="noopener noreferrer" >
       <div dangerouslySetInnerHTML={{__html: Directionsvg}}/> */}
