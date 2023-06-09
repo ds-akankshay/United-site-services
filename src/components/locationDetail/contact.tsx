@@ -10,7 +10,9 @@ import { StaticData } from "../../../sites-global/staticData";
 import Holidayhours from "./Holdayhours";
 import Model from "./Model";
 import CustomMap from "./CustomMap";
+import timesvg from "../../images/watch-icn.svg";
 import OpenClose from "../commons/openClose";
+
 
 const Contact = (props: any) => {
   const {
@@ -61,20 +63,34 @@ const Contact = (props: any) => {
         ) : (
           ""
         )}
+        
         <OpenClose hours={hours} />
         <ul className="">
           <li className="" >
-            <GetDirection
+            {/* <GetDirection
+              buttonText={c_getDirectionsCTAText ? c_getDirectionsCTAText : StaticData.getDirection}
+              address={address}
+              latitude={latitude}
+              longitude={longitude}
+            /> */}
+          </li>
+        </ul>
+        <div className="" style={{display:"flex"}}>
+        <button className="rounded-full"  style={{marginLeft:"" ,backgroundColor:"#00284a",color:"white",width: "136px",height: "36px",fontSize: "11px"}}>
+        
+          <a href={c_getqoutelocation?.link}>
+          <span>{c_getqoutelocation?.label}</span>
+        </a>
+        </button>
+        <span className="getdirection" style={{marginLeft:"45px"}}>
+         <GetDirection 
               buttonText={c_getDirectionsCTAText ? c_getDirectionsCTAText : StaticData.getDirection}
               address={address}
               latitude={latitude}
               longitude={longitude}
             />
-          </li>
-        </ul>
-        <a href={c_getqoutelocation?.link}>
-          <span>{c_getqoutelocation?.label}</span>
-        </a>
+            </span>
+            </div>
         <div className="map-sec">
           <CustomMap prop={yextDisplayCoordinate} />
         </div>
