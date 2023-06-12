@@ -64,7 +64,7 @@ const Contact = (props: any) => {
           ""
         )}
         
-        <OpenClose hours={hours} />
+        <OpenClose timezone={timezone} hours={hours} />
         <ul className="">
           <li className="" >
             {/* <GetDirection

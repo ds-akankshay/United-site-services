@@ -501,7 +501,7 @@ const Location: Template<ExternalApiRenderData> = ({
             </div>
             <div className="location-information">
               <Contact address={address}
-                phone={mainPhone} time={timezone} latitude={yextDisplayCoordinate ? yextDisplayCoordinate.latitude : displayCoordinate?.latitude}
+                phone={mainPhone} timezone={timezone} latitude={yextDisplayCoordinate ? yextDisplayCoordinate.latitude : displayCoordinate?.latitude}
                 yextDisplayCoordinate={yextDisplayCoordinate} longitude={yextDisplayCoordinate ? yextDisplayCoordinate.longitude : displayCoordinate?.longitude} hours={hours} additionalHoursText={additionalHoursText} c_getqoutelocation={c_getqoutelocation} >
 
                 </Contact>

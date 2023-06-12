@@ -15,7 +15,10 @@ export default function ViewMore(props: viewMoreProps): JSX.Element | null {
   const numResults = useSearchState(state => state.vertical.resultsCount) || 0;
  
   const executeSearchWithNewOffset = (newOffset: number) => {
-    searchAction.setOffset(newOffset);
+    // searchAction.setOffset(newOffset);
+    // searchAction.executeVerticalQuery();
+    searchAction.setOffset(0);
+    searchAction.setVerticalLimit(numResults);
     searchAction.executeVerticalQuery();
   }
 

@@ -12,7 +12,10 @@
       "c_socialicon",
       "c_text",
       "c_line",
-      "c_icon"
+      "c_icon",
+      "c_iconcontact",
+      "c_contactheader",
+      "c_circle"
 
   ],
   "localization": {

@@ -12,13 +12,20 @@ const Header = (props: any) => {
   ));
 return (
     <>
-      <div className="">
-        <div className="flex space-x-4" >
+      <div className="" style={{color:"#00539b",fontWeight:"bold"}}>
+        <div className="flex space-x-9" >
           <img src={props._site.c_image.url} alt=""  style={{height:"60px",width:"115px",marginLeft: "30px"}}/>
           
           {Header1}
          <img  className="search" src= {props?._site?.c_icon.url} alt="" style={{marginLeft: "50px"}}/>
+         <img src={props._site.c_iconcontact.url} alt="" style={{height:"17px",marginTop: "30px",marginLeft: "80px"}} />
+         <a href="" style={{marginTop: "30px" ,marginLeft:"inherit"}}>{props._site.c_contactheader}</a>
+         <img className="cursor-auto" src={props._site.c_circle.url} alt="" style={{height:"130px",marginLeft:"70px"}} />
+
         </div>
+      <div>
+        
+      </div>
         
      </div>
     </>
