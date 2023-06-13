@@ -331,7 +331,7 @@ const City: Template<TemplateRenderProps> = ({
                                 height="30"
                                 viewBox="0 0 21.23 30"
                             >
-                                <g transform="translate(0 0)">
+                                {/* <g transform="translate(0 0)">
                                     <path
                                         d="M6.789,23.576c1.079,1.719,2.246,3.8,3.4,5.825.427.747.813.859,1.326-.027,1.113-1.931,2.207-3.931,3.359-5.8,3.5-5.661,9.223-11.181,4.67-18.8C15.5-1.987,4.5-1.265,1.216,5.034c-3.769,7.219,2.117,13.039,5.574,18.542Z"
                                         fill="#0060af"
@@ -342,7 +342,7 @@ const City: Template<TemplateRenderProps> = ({
                                         fill="#0060af"
                                         fillRule="evenodd"
                                     />
-                                </g>
+                                </g> */}
                             </svg>
                             <p>
                                 {entity.address.line1 ? entity.address.line1 : ""},

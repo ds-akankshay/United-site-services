@@ -482,20 +482,25 @@ const Location: Template<ExternalApiRenderData> = ({
         ></BreadCrumbs>
 
           <PageLayout global={_site}>
+            <div>
+            <img src={c_bannerimage.url} alt="" />
+            {/* <span className="text-black text-4xl w-1/2 text-center">HAND HYGIENE GUIDANCE</span> */}
+            </div>
+            
 
-
+   
             <div className="container">
               <div className="image" style={{ marginTop: "25px" }}>
-                <img src={c_bannerimage.url} alt="" />
+                {/* <img src={c_bannerimage.url} alt="" /> */}
 
                 <div className='banner-text banner-dark-bg justify-center text-center'>
-                  <h1 className="">{name}</h1>
+                  <h1 className="" style={{color:"#00539b"}}>{name}</h1>
                 </div>
-                <div style={{ marginLeft: "505px", fontSize: "initial" }}>
+                <div style={{ marginLeft: "505px", fontSize: "initial" ,color:"#00539b"}}>
                   {c_textbanner}{name}
                 </div>
                 <div className="openClosestatus detail-page closeing-div">
-                  <OpenClose timezone={timezone} hours={hours} />
+                  {/* <OpenClose timezone={timezone} hours={hours} /> */}
                 </div>
               </div>
             </div>
