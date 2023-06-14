@@ -39,7 +39,7 @@ const Contact = (props: any) => {
         <div className="icon-row content-col">
           <div className="icon">
             {" "}
-            <img className=" " src={mapimage} width="20" height="20" alt="mapimage" />
+            <img  src={mapimage} width="20" height="20" alt="mapimage" />
           </div>
           <div className="  address-text notHighlight">
             {address.line1}
@@ -52,7 +52,7 @@ const Contact = (props: any) => {
           <div className="icon-row">
             <div className="icon">
               {" "}
-              <img className=" " src={Phonesvg} width="22" height="22" alt="phonesvg" />
+              <img  src={Phonesvg} width="22" height="22" alt="phonesvg" />
             </div>
             <div className="content-col">
               <a id="address" className=" location-phn" href={`tel:${phone}`}>
@@ -65,8 +65,8 @@ const Contact = (props: any) => {
         )}
         
         <OpenClose timezone={timezone} hours={hours} />
-        <ul className="">
-          <li className="" >
+        <ul >
+          <li  >
             {/* <GetDirection
               buttonText={c_getDirectionsCTAText ? c_getDirectionsCTAText : StaticData.getDirection}
               address={address}
@@ -75,8 +75,8 @@ const Contact = (props: any) => {
             /> */}
           </li>
         </ul>
-        <div className="" style={{display:"flex"}}>
-        <button className="rounded-full"  style={{marginLeft:"" ,backgroundColor:"#00284a",color:"white",width: "136px",height: "36px",fontSize: "11px"}}>
+        <div style={{display:"flex"}}>
+        <button className="rounded-full"  style={{backgroundColor:"#00284a",color:"white",width: "136px",height: "36px",fontSize: "11px"}}>
         
           <a href={c_getqoutelocation?.link}>
           <span>{c_getqoutelocation?.label}</span>

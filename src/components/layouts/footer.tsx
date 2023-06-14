@@ -9,10 +9,10 @@ const Footer = (props: any) => {
 	const Footersection = props?._site?.c_footer?.map((link: any) => (
 		<>
 			<div style={{ color: "white", marginTop: "40px" }}>
-				<h2 className="" style={{ marginLeft: "30px", marginRight: "30px" }}>{link.heading}</h2>
+				<h2  style={{ marginLeft: "30px", marginRight: "30px" }}>{link.heading}</h2>
 				<ul> {link?.name?.map((value: any) => (
 					<li>
-						<a href="">
+						<a >
 							<span style={{ color: "#979a9a", marginLeft: "30px", marginRight: "30px" }}>{value?.label} </span>
 						</a>
 					</li>
@@ -24,13 +24,13 @@ const Footer = (props: any) => {
 	const socialicon = props?._site?.c_socialicon?.map((link: any) => (
 		<>
 			<a >
-				<img src={link.url} alt="" style={{ height: "22px" }} />
+				<img src={link.url} style={{ height: "22px" }} />
 			</a>
 		</>
 	));
 	const text = props?._site?.c_text?.url.map((link: any) => (
 		<>
-			<a href="">
+			<a >
 				<div >{link.label}</div>
 			</a>
 		</>

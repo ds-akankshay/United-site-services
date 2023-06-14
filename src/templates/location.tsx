@@ -483,7 +483,7 @@ const Location: Template<ExternalApiRenderData> = ({
 
 
 
-        
+
 
           <PageLayout global={_site}>
             <div>
@@ -498,7 +498,7 @@ const Location: Template<ExternalApiRenderData> = ({
                 {/* <img src={c_bannerimage.url} alt="" /> */}
 
                 <div className='banner-text banner-dark-bg justify-center text-center'>
-                  <h1 className="" style={{color:"#00539b"}}>{name}</h1>
+                  <h1  style={{color:"#00539b"}}>{name}</h1>
                 </div>
                 <div style={{ marginLeft: "505px", fontSize: "initial" ,color:"#00539b"}}>
                   {c_textbanner}{name}
@@ -534,7 +534,7 @@ const Location: Template<ExternalApiRenderData> = ({
               </div>
             </div>
             <div className="flex space-x-8" style={{ marginTop: "70px" }} >
-              <div className=""><img src={c_about.image.url} alt="" className="w-full" style={{ height: "300px", width: "1147px", marginLeft: "18px" }} /></div>
+              <div ><img src={c_about.image.url} alt="" className="w-full" style={{ height: "300px", width: "1147px", marginLeft: "18px" }} /></div>
               <div >
                 <h1 style={{color: "#00539b"}}>{c_about.name1}</h1>
                 <p style={{ margin: "10px 0px"}}>{c_about.description1}</p>
@@ -558,7 +558,7 @@ const Location: Template<ExternalApiRenderData> = ({
                 </div>
                 <div className="bannercolor w-full" style={{marginTop: "26px",height:"125px"}}>
                   <div style={{fontSize: "x-large",color:"#00284a",marginTop:"10px"}}>{c_startedget.name}</div><br />
-                  <a href="">
+                  <a >
                     <button className="rounded-full"  style={{marginLeft:"1000px" ,backgroundColor:"#00284a",color:"white",width: "136px",height: "36px",fontSize: "11px"}}>{c_startedget.button.label}</button>
                   </a><br />
                   <span>{c_startedget.paragraph}</span>

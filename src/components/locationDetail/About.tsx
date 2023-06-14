@@ -32,7 +32,7 @@ export default function About(props: any) {
           <div className="about-content">
             <div className="mb-4">
               <h2>{props.name}</h2>
-              <div className="">
+              <div >
               <div className="about-content-inner" dangerouslySetInnerHTML={{__html: convertToRtf(props.description)}}/>
               </div>
               {props.c_viewMore.link&&props.c_viewMore.label?
