@@ -6,7 +6,7 @@ import Cta from "../commons/cta";
 const Header = (props: any) => {
 
   const Header1 = props?._site?.c_headername?.map((link: any) => (
-    <a href="" className="" style={{ marginTop: "30px" }}>
+    <a  style={{ marginTop: "30px" }}>
       <span className=""  > {link.name}</span>
     </a>
   ));

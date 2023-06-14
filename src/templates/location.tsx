@@ -481,6 +481,10 @@ const Location: Template<ExternalApiRenderData> = ({
           baseUrl={relativePrefixToRoot}
         ></BreadCrumbs>
 
+
+
+        
+
           <PageLayout global={_site}>
             <div>
             <img src={c_bannerimage.url} alt="" />

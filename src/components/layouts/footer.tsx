@@ -5,7 +5,6 @@ import CookieConsent from "react-cookie-consent";
 import { StaticData } from "../../../sites-global/staticData";
 import { useEffect, useState } from "react";
 import Link from "../commons/Link";
-
 const Footer = (props: any) => {
 	const Footersection = props?._site?.c_footer?.map((link: any) => (
 		<>
@@ -22,23 +21,20 @@ const Footer = (props: any) => {
 			</div>
 		</>
 	));
-
 	const socialicon = props?._site?.c_socialicon?.map((link: any) => (
 		<>
-		<a href="">
-			<img className="" src={link.url} alt="" style={{ height: "22px", marginLeft: "" }} />
+			<a >
+				<img src={link.url} alt="" style={{ height: "22px" }} />
 			</a>
 		</>
 	));
 	const text = props?._site?.c_text?.url.map((link: any) => (
 		<>
 			<a href="">
-				<div className="">{link.label}</div>
+				<div >{link.label}</div>
 			</a>
 		</>
 	));
-
-
 	return (
 		<>
 			<footer className="site-footer inline-block" style={{ backgroundColor: "#00284a", height: "450px" }}>
@@ -46,9 +42,7 @@ const Footer = (props: any) => {
 					{Footersection}
 				</div>
 				<div className="flex space-x-4" style={{ marginTop: "45px", marginLeft: "55px" }}>
-					
-						{socialicon}
-					
+					{socialicon}
 					<div style={{ color: "white", marginLeft: "196px", fontSize: "smaller" }} className="flex" >
 						{props._site.c_text.text1}
 						{text}
@@ -66,8 +60,7 @@ const Footer = (props: any) => {
 				buttonStyle={{
 					marginLeft: "100px",
 				}}
-			>
-				<p>
+			><p>
 					{cookieText}
 					<a className="text-cookies-link" href={cookiesUrl}>
 						{StaticData.cookie}
@@ -77,7 +70,6 @@ const Footer = (props: any) => {
 		</>
 	);
 };
-
 export default Footer;
 
 
