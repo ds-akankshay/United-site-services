@@ -12,7 +12,7 @@ const Footer = (props: any) => {
 				<h2  style={{ marginLeft: "30px", marginRight: "30px" }}>{link.heading}</h2>
 				<ul> {link?.name?.map((value: any) => (
 					<li>
-						<a >
+						<a href="">
 							<span style={{ color: "#979a9a", marginLeft: "30px", marginRight: "30px" }}>{value?.label} </span>
 						</a>
 					</li>
@@ -23,14 +23,14 @@ const Footer = (props: any) => {
 	));
 	const socialicon = props?._site?.c_socialicon?.map((link: any) => (
 		<>
-			<a >
+			<a href="">
 				<img src={link.url} style={{ height: "22px" }} />
 			</a>
 		</>
 	));
 	const text = props?._site?.c_text?.url.map((link: any) => (
 		<>
-			<a >
+			<a href="">
 				<div >{link.label}</div>
 			</a>
 		</>
